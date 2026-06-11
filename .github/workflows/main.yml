@@ -22,11 +22,22 @@ jobs:
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_TOKEN }}
 
-      - name: Build and Push Frontend Image
+      # ---------------- FRONTEND ----------------
+      - name: Build & Push Frontend
         uses: docker/build-push-action@v6
         with:
           context: ./frontend
           file: ./frontend/Dockerfile
           push: true
           no-cache: true
-          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/student-feedback:latest
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/student-feedback-frontend:latest
+
+      # ---------------- BACKEND ----------------
+      - name: Build & Push Backend
+        uses: docker/build-push-action@v6
+        with:
+          context: ./Backend
+          file: ./Backend/Dockerfile
+          push: true
+          no-cache: true
+          tags: ${{ secrets.DOCKER_HUB_USERNAME }}/student-feedback-backend:latest
