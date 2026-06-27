@@ -1,41 +1,31 @@
-📌 Project Title
+📌 Project Overview
 
-Student Feedback App – Kubernetes Deployment with Monitoring
+A full-stack microservices application (Frontend, Backend, MongoDB) deployed on Kubernetes (Kind). Implemented monitoring using Prometheus and Grafana.
 
-📌 Tech Stack
-
-Kubernetes (Kind )
-
+🛠 Tech Stack
+Kubernetes (Kind / AWS)
 Docker
-
 Helm
 Prometheus
 Grafana
-CI/CD ( GitHub Actions )
-
-
-📌 Features
+CI/CD (GitHub Actions)
+✨ Features
 Microservices architecture (Frontend, Backend, MongoDB)
-Kubernetes deployment using YAML files
+Kubernetes Deployments using YAML files
 Service communication using ClusterIP & NodePort
 Monitoring using Prometheus + Grafana
-Real-time metrics (CPU, Memory, Network)
+Real-time metrics (CPU, Memory, Network usage)
 AWS-based deployment (if used)
-
-
-📌 How to Run
-git clone <repo-url>
+🚀 How to Run
+git clone https://github.com/<your-username>/student-feedback.git
 cd student-feedback/k8s
 kubectl apply -f .
-
-
-📌 Monitoring Setup
+📊 Monitoring Setup
 helm install monitoring prometheus-community/kube-prometheus-stack -n monitoring
-
 
 📌 Screenshots
 
-Grafana dashboards
+Grafana Dashboard
 NETWORK
 
  ![alt text](image.png)
@@ -44,14 +34,14 @@ CPU
 
  ![alt text](image-1.png) 
 
- Promethus dashboards
+ Promethus Dashboards
 
 ![alt text](image-2.png)
 
 ![alt text](image-3.png)
 
 
-🚀 3. GitHub push commands
+🚀 GitHub Push Commands
 git init
 git add .
 git commit -m "Initial commit - Kubernetes + Monitoring project"
