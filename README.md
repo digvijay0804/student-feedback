@@ -5,7 +5,9 @@ Student Feedback App – Kubernetes Deployment with Monitoring
 📌 Tech Stack
 
 Kubernetes (Kind )
+
 Docker
+
 Helm
 Prometheus
 Grafana
